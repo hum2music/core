@@ -56,6 +56,12 @@ export interface SongSection {
   barCount: number;
 }
 
+/** The tempo (BPM) in effect starting at a given beat position — a piece whose tempo isn't flat throughout (e.g. a terminal ritardando) is a list of these rather than one number. */
+export interface TempoChange {
+  atBeat: number;
+  bpm: number;
+}
+
 export interface InstrumentTrack {
   instrument: string;
   notes: NoteEvent[];
